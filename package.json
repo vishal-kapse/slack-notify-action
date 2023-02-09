@@ -1,7 +1,7 @@
 {
-  "name": "javascript-action",
+  "name": "simple-slack-notify-action",
   "version": "1.0.0",
-  "description": "JavaScript Action Template",
+  "description": "Simple Slack Notification action using webhook",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
@@ -11,19 +11,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/javascript-action.git"
+    "url": "git+https://github.com/vishal-kapse/slack-notify-action.git"
   },
   "keywords": [
-    "GitHub",
+    "Vishal Kapse",
     "Actions",
-    "JavaScript"
+    "Salck",
+    "Webhook"
   ],
-  "author": "",
+  "author": "vishal-kapse",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/actions/javascript-action/issues"
+    "url": "https://github.com/vishal-kapse/slack-notify-action/issues"
   },
-  "homepage": "https://github.com/actions/javascript-action#readme",
+  "homepage": "https://github.com/vishal-kapse/slack-notify-action#simple-slack-notification-action",
   "dependencies": {
     "@actions/core": "^1.10.0",
     "request": "^2.88.2",
