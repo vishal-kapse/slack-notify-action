@@ -1,4 +1,4 @@
-name: Slack Notify Action
+name: Simple Slack Notify Action
 author: Vishal Kapse
 description: Simple slack notification action using webhook url
 inputs:
