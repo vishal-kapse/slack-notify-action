@@ -1,7 +1,7 @@
 # Simple Slack notification action
 
 [![units-test](https://github.com/vishal-kapse/slack-notify-action/actions/workflows/test.yml/badge.svg)](https://github.com/vishal-kapse/slack-notify-action/actions/workflows/test.yml)
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ##
 
 Send GitHub Actions workflow status notifications to Slack.
