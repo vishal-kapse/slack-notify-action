@@ -11,7 +11,7 @@ A very simple and light javascript action uses POST request to slack webhook.
 
 - Simple, light and easy to use
 - Customize the Slack notification message
-- Customize the color
+- Dynamic color of slack message based on the status of job. Green if success and red on failure
 
 
 ## Example workflows
@@ -19,21 +19,25 @@ A very simple and light javascript action uses POST request to slack webhook.
 Minimal workflow
 
 ```bash
-  - uses: vishal-kapse/slack-notify-action@v1
+  - name: "Workflow Status Slack Notification"
     if: failure()
+    uses: vishal-kapse/slack-notify-action@main
     with:
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
+      status: ${{ job.status }}
+     
 ```
 
-Custom message and color
+Custom message
 
 ```bash
   - uses: vishal-kapse/slack-notify-action@v1
-    if: failure()
+    if: always()
     with:
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
-      color: "#ff0000"
-      message: "Github workflow run failed"
+      status: ${{ job.status }}
+      message: "Github workflow run has status ${{ job.status }}"
 ```
 
+Note: If `status` is not passed it will take the default value as `failure`
 
