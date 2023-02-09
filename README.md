@@ -31,7 +31,7 @@ Minimal workflow
 Custom message
 
 ```bash
-  - uses: vishal-kapse/slack-notify-action@v1
+  - uses: vishal-kapse/slack-notify-action@main
     if: always()
     with:
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
