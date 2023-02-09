@@ -21,7 +21,7 @@ Minimal workflow
 ```bash
   - name: "Workflow Status Slack Notification"
     if: failure()
-    uses: vishal-kapse/slack-notify-action@main
+    uses: vishal-kapse/slack-notify-action@v1.0
     with:
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
       status: ${{ job.status }}
@@ -31,7 +31,7 @@ Minimal workflow
 Custom message
 
 ```bash
-  - uses: vishal-kapse/slack-notify-action@main
+  - uses: vishal-kapse/slack-notify-action@v1.0
     if: always()
     with:
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
