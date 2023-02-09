@@ -1,13 +1,23 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: Slack Notify Action
+author: Vishal Kapse
+description: Simple slack notification action using webhook url
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  SLACK_WEBHOOK_URL:
+    description: Slack webhook URL
     required: true
-    default: '1000'
-outputs:
-  time: # output will be available to future steps
-    description: 'The current time after waiting'
+  color:
+    description: Color of slack banner notification
+    required: false
+    default: "#ff0000"
+  message:
+    description: Notification header to display in slack
+    required: false
+    default: "Github Actions workflow run has failed"
+
 runs:
-  using: 'node16'
+  using: node12
   main: 'dist/index.js'
+
+branding:
+  icon: "message-square"
+  color: "#fa6019"
