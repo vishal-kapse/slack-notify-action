@@ -5,17 +5,17 @@ inputs:
   SLACK_WEBHOOK_URL:
     description: Slack webhook URL
     required: true
-  color:
-    description: Color of slack banner notification
+  status:
+    description: Status of workflow
     required: false
-    default: "#ff0000"
+    default: failure
   message:
     description: Notification header to display in slack
     required: false
-    default: "Github Actions workflow run has failed"
+    default: "Github Actions workflow run details"
 
 runs:
-  using: node12
+  using: node16
   main: 'dist/index.js'
 
 branding:

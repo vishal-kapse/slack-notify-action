@@ -35625,17 +35625,21 @@ const request = __nccwpck_require__(8699);
 try{
 
   const webhook = core.getInput('SLACK_WEBHOOK_URL');
-  const color = core.getInput('color');
+  const status = core.getInput('status');
   const message = core.getInput('message');
 
-  core.debug(`webhook url supplied ${webhook}`);
+  core.debug(`webhook url supplied : ${webhook}`);
+  core.debug(`status of workflow : ${status}`);
+  core.debug(`slack notification message supplied : ${message}`);
+
+  const color = (status === 'success') ? '#36a64f' : '#ff0000';
 
   const payload = JSON.stringify({
     attachments: [
       {
         fallback: 'Github Actions Run Information',
-        color: `${color}`,
-        pretext: `${message}`,
+        color: color,
+        pretext: message,
         fields: [
           {
             title: 'Repository',
@@ -35648,8 +35652,8 @@ try{
             short: true,
           },
           {
-            title: 'Run ID',
-            value: process.env.GITHUB_RUN_ID,
+            title: 'Status',
+            value: status,
             short: true,
           },
           {
