@@ -1,6 +1,7 @@
-# Simple Slack notification action
+# Simple Slack notification action ![visitors](https://visitor-badge.laobi.icu/badge?page_id=vishal-kapse.slack-notify-action)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ##
 
 Send GitHub Actions workflow status notifications to Slack.
